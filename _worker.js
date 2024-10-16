@@ -1,36 +1,43 @@
 // @ts-ignore
 import { connect } from 'cloudflare:sockets';
+const listProxy = [
+    	{ path: '/akamai', proxy: '172.232.238.169' },//singapore
+    	{ path: '/us', proxy: '91.186.208.191' },//amerika
+    	{ path: '/do', proxy: '188.166.255.195' },//singapore
+    	{ path: '/do2', proxy: '143.198.213.197' },//singapore
+    	{ path: '/incapsula', proxy: '45.60.186.91' },//tokyo
+    	{ path: '/ovh', proxy: '15.235.162.49' },//singapore
+	{ path: '/ore', proxy: '138.2.94.123' },//singapore oracle
+	{ path: '/do3', proxy: '104.248.145.216' },//singapore do
+];
 
 // How to generate your own UUID:
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
 let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
 
 //const พร็อกซีไอพีs = ['104.248.145.216'];
-const พร็อกซีไอพีs = [
-    '172.232.238.169', // 0
-    '52.141.25.42',    // 1
-    '91.186.208.191',  // 2
-    '34.34.217.201',   // 3
-    '188.166.255.195', // 4
-    '143.198.213.197', // 5
-    '45.60.186.91',    // 6
-    '15.235.162.49',   // 7
-    '138.2.94.123',    // 8
-    '104.248.145.216'  // 9
-];
-
-// Fungsi untuk memilih IP proxy berdasarkan urutan
-function pilihProxy(index) {
-    if (index >= 0 && index < พร็อกซีไอพีs.length) {
-        return พร็อกซีไอพีs[index];
-    } else {
-        return 'Indeks tidak valid';
-    }
+//GANTI PROXYIP
+//let proxyIP = '138.2.94.123';
+let พร็อกซีไอพีs;
+// Function to get a proxy based on the server path
+function getProxyByPath(path) {
+    const proxyItem = listProxy.find(item => item.path === path);
+    return proxyItem ? proxyItem.proxy : null;  // Return the proxy or null if not found
 }
 
-// Ganti angka di sini untuk memilih IP lainnya
-const ipDipilih = pilihProxy(8); // Ganti angka sesuai urutan yang diinginkan
-console.log('IP Proxy yang Dipilih:', ipDipilih);
+// Example usage: Select a proxy based on a specific path
+let selectedPath = '/do2';  // You can change this to any path you want
+proxyIP = getProxyByPath(selectedPath);
+
+if (proxyIP) {
+    console.log(`Proxy IP for path ${selectedPath}:`, proxyIP);
+} else {
+    console.log(`No proxy found for path ${selectedPath}`);
+}
+
+if (!isValidUUID(userID)) {
+	throw new Error('uuid is not valid');
+}
 //==================================batas ganti=============================
 
 // if you want to use ipv6 or single พร็อกซีไอพี, please add comment at this line and remove comment at the next line
