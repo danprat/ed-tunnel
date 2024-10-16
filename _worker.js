@@ -1,15 +1,14 @@
 import { connect } from 'cloudflare:sockets';
 const listProxy = [
-	{ path: '/akamai', proxy: '172.232.238.169' },
-	{ path: '/kr', proxy: '52.141.25.42'},
-	{ path: '/us', proxy: '91.186.208.191'},
-	{ path: '/gcp', proxy: '34.34.217.201' },
-	{ path: '/do', proxy: '188.166.255.195' },
-	{ path: '/do2', proxy: '143.198.213.197' },
-	{ path: '/incapsula', proxy: '45.60.186.91' },
-	{ path: '/ovh', proxy: '15.235.162.49' },
-	{ path: '/ore', proxy: '138.2.94.123' },//singapore oracle
-	{ path: '/do3', proxy: '104.248.145.216' },//singapore do
+	{ path: '/akamai', proxy: '172.232.238.169' }, // Akamai (Global CDN, tidak spesifik negara)
+	{ path: '/kr', proxy: '52.141.25.42'}, // Korea Selatan - Microsoft Azure (Cloud Provider)
+	{ path: '/us', proxy: '91.186.208.191'}, // Amerika Serikat - M247 Ltd
+	{ path: '/do', proxy: '188.166.255.195' }, // Singapura - DigitalOcean
+	{ path: '/do2', proxy: '143.198.213.197' }, // Singapura - DigitalOcean
+	{ path: '/incapsula', proxy: '45.60.186.91' }, // Amerika Serikat - Incapsula (Imperva)
+	{ path: '/ovh', proxy: '15.235.162.49' }, // Kanada - OVHcloud
+	{ path: '/ore', proxy: '138.2.94.123' }, // Singapura - Oracle Cloud
+	{ path: '/do3', proxy: '104.248.145.216' }, // Singapura - DigitalOcean
     
 ];
 let proxyIP;
