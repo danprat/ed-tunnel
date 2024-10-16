@@ -62,6 +62,11 @@ pattern = "io.ruangguru.com.sg1.bursalokerterbaru.com"
 custom_domain = true
 
 [[routes]]
+pattern = "gw.ruangguru.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+
+[[routes]]
 pattern = "data.mt.sg1.bursalokerterbaru.com"
 custom_domain = true
 
