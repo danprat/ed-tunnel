@@ -5,7 +5,33 @@ import { connect } from 'cloudflare:sockets';
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
 let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
 
-const พร็อกซีไอพีs = ['104.248.145.216'];
+//const พร็อกซีไอพีs = ['104.248.145.216'];
+const พร็อกซีไอพีs = [
+    '172.232.238.169', // 0
+    '52.141.25.42',    // 1
+    '91.186.208.191',  // 2
+    '34.34.217.201',   // 3
+    '188.166.255.195', // 4
+    '143.198.213.197', // 5
+    '45.60.186.91',    // 6
+    '15.235.162.49',   // 7
+    '138.2.94.123',    // 8
+    '104.248.145.216'  // 9
+];
+
+// Fungsi untuk memilih IP proxy berdasarkan urutan
+function pilihProxy(index) {
+    if (index >= 0 && index < พร็อกซีไอพีs.length) {
+        return พร็อกซีไอพีs[index];
+    } else {
+        return 'Indeks tidak valid';
+    }
+}
+
+// Ganti angka di sini untuk memilih IP lainnya
+const ipDipilih = pilihProxy(8); // Ganti angka sesuai urutan yang diinginkan
+console.log('IP Proxy yang Dipilih:', ipDipilih);
+//==================================batas ganti=============================
 
 // if you want to use ipv6 or single พร็อกซีไอพี, please add comment at this line and remove comment at the next line
 let พร็อกซีไอพี = พร็อกซีไอพีs[Math.floor(Math.random() * พร็อกซีไอพีs.length)];
