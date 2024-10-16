@@ -27,10 +27,10 @@ function getProxyByPath(path) {
 
 // Example usage: Select a proxy based on a specific path
 let selectedPath = '/ore';  // You can change this to any path you want
-proxyIP = getProxyByPath(selectedPath);
+พร็อกซีไอพีs = getProxyByPath(selectedPath);
 
-if (proxyIP) {
-    console.log(`Proxy IP for path ${selectedPath}:`, proxyIP);
+if (พร็อกซีไอพีs) {
+    console.log(`Proxy IP for path ${selectedPath}:`, พร็อกซีไอพีs);
 } else {
     console.log(`No proxy found for path ${selectedPath}`);
 }
