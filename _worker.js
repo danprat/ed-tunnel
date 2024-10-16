@@ -26,7 +26,7 @@ function getProxyByPath(path) {
 }
 
 // Example usage: Select a proxy based on a specific path
-let selectedPath = '/do2';  // You can change this to any path you want
+let selectedPath = '/ore';  // You can change this to any path you want
 proxyIP = getProxyByPath(selectedPath);
 
 if (proxyIP) {
