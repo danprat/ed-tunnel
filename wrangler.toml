@@ -13,6 +13,66 @@ custom_domain = true
 [[routes]]
 pattern = "quiz.vidio.com.sg1.bursalokerterbaru.com"
 custom_domain = true
+[[routes]]
+pattern = "ava.game.naver.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "df.game.naver.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "quiz.vidio.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "quiz.int.vidio.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "graph.instagram.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "investors.spotify.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "cache.netflix.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "creativeservices.netflix.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "support.zoom.us.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "zaintest.vuclip.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "live.iflix.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "io.ruangguru.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "data.mt.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "www.udemy.com.sg1.bursalokerterbaru.com"
+custom_domain = true
+
+[[routes]]
+pattern = "beta.zoom.us.sg1.bursalokerterbaru.com"
+custom_domain = true
+
 
 [vars]
 # UUID = "d342d11e-d424-4583-b36e-524ab1f0afa4"
